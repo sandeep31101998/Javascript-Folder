@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <title>SANDEEP'S VEHICLE PARKING SYSTEM</title>
+</head>
+
+<body style="background-image: url('./Images/egor-myznik-rCZQCbUAQvg-unsplash.jpg');background-size: cover;">
+    <header class="shadow">
+        <div class="header-content d-flex justify-content-center p-2">
+            <img src="./Images/ICON.png" alt="" id="header-logo">
+            <div id="header-msg" class="ml-5 align-self-center">VEHICLE PARKING SYSTEM</div>
+        </div>
+    </header>
+    <div class="form-container mt-5">
+        <form class="w-50 mx-auto" id="entryForm" autocomplete="on">
+            <h5 class="text-center" style="font-weight: bolder;color: red;">ADD VEHICLES TO PARKING SPACE</h5>
+            <div class="form-group">
+                <label for="owner">OWNER<span class="required">*</span>:</label>
+                <input type="text" class="form-control rounded-0 shadow-sm in" id="owner" placeholder="OWNER NAME">
+            </div>
+            <div class="form-group">
+                <label for="car">VEHICLE<span class="required">*</span>:</label>
+                <input type="text" class="form-control rounded-0 shadow-sm in" id="car" placeholder="CAR NAME">
+            </div>
+            <div class="form-group">
+                <label for="licensePlate">VEHICLE NUMBER<span class="required">*</span>:</label>
+                <input type="text" class="form-control rounded-0 shadow-sm in" id="licensePlate"
+                    placeholder="ex:- KA-11-AA-1234">
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label for="entryDate">DATE OF ENTRY<span class="required">*</span>:</label>
+                    <input type="date" class="form-control rounded-0 shadow-sm" id="entryDate">
+                </div>
+                <div class="col-6">
+                    <label for="exitDate">DATE OF EXIT<span class="required">*</span>:</label>
+                    <input type="date" class="form-control rounded-0 shadow-sm" id="exitDate">
+                </div>
+            </div>
+            <button type="submit" class="btn mx-auto d-block mt-5" id="btnOne">ADD CAR</button>
+        </form>
+    </div>
+    <div class="table-container mt-5 mb-5 w-75 mx-auto">
+        <h5 class="text-center mb-3" style="font-weight:bolder;color: white;">LIST OF VEHICLES IN PARKING SPACE</h5>
+        <input type="text" class="w-100 mb-3" id="searchInput" placeholder="SEARCH......." style="color: black;">
+        <table class="table table-responsive-md shadow " id="parkingTable">
+            <thead class="thead-dark" id="tableHead">
+                <tr>
+                    <th scope="col">OWNER</th>
+                    <th scope="col">VEHICLE</th>
+                    <th scope="col">VEHICLE NUMBER</th>
+                    <th scope="col">DATE OF ENTRY</th>
+                    <th scope="col">DATE OF EXIT</th>
+                    <th scope="col">REMOVE</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./JS/bootstrap.min.js"></script>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>
